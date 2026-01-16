@@ -1,0 +1,17 @@
+project_name: type_A
+model:
+  name: resnet50
+  num_classes: 11
+  pretrained: true
+data:
+  root_dir: ./data/type_A
+  input_size: 224
+  batch_size: 32
+  num_workers: 0
+train:
+  learning_rate: 0.001
+  epochs: 20
+  seed_size: 250
+active_learning:
+  query_size: 100
+  strategy: entropy
